@@ -53,6 +53,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BackgroundSteps.cs" />
     <Compile Include="Calculator.cs" />
     <Compile Include="MyFirstSpecFlowScenario.feature.cs">
       <AutoGen>True</AutoGen>
