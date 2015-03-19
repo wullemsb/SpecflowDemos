@@ -16,7 +16,7 @@ namespace SpecFlowDemos
             _calculator = calculator;
         }
 
-        [Given(@"I have entered (.*) into the calculator")]
+        [Given(@"I have entered (\d+) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(int p0)
         {
             _values.Add(p0);
@@ -28,7 +28,7 @@ namespace SpecFlowDemos
            _result= _calculator.Add(_values.ToArray());
         }
 
-        [Then(@"the result should be (.*) on the screen")]
+        [Then(@"the result should be (\d+) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(int p0)
         {
             Assert.AreEqual(p0, _result);
