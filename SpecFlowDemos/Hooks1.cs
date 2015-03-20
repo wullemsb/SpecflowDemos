@@ -12,19 +12,19 @@ namespace SpecFlowDemos
     {
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
-        [BeforeScenario]
+        [BeforeScenario("normalscenario")]
         public void BeforeScenario()
         {
             Trace.WriteLine("Before scenario");
         }
 
-        [BeforeStep]
+        [BeforeStep("specialscenario")]
         public void BeforeStep()
         {
-            Trace.WriteLine("Before step");
+            Trace.WriteLine("Before special step");
         }
 
-        [AfterStep]
+        [AfterStep("normalscenario")]
         public void AfterStep()
         {
             Trace.WriteLine("After step");
