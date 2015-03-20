@@ -15,20 +15,20 @@ namespace SpecFlowDemos
         {
             _calculator = calculator;
         }
-
-        [Given(@"I have entered (.*) into the calculator")]
+          [Given(@"dat ik (.*) heb ingegeven in de rekenmachine")]
         public void GivenIHaveEnteredIntoTheCalculator(int p0)
         {
             _values.Add(p0);
         }
 
-        [When(@"I press add")]
+         [When(@"ik op add klik")]
         public void WhenIPressAdd()
         {
            _result= _calculator.Add(_values.ToArray());
         }
 
-        [Then(@"the result should be (.*) on the screen")]
+
+         [Then(@"moet het resultaat (.*) zijn")]
         public void ThenTheResultShouldBeOnTheScreen(int p0)
         {
             Assert.AreEqual(p0, _result);
