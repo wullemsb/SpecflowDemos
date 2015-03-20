@@ -1,17 +1,15 @@
 ﻿Feature: MyFirstSpecFlowScenario
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	SpecFlow Samples
 
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
+Scenario Outline: Add two positive numbers
+	Given I have entered <number 1> into the calculator
+	And I have entered <number 2> into the calculator
 	When I press add
-	Then the result should be 120 on the screen
+	Then the result should be <result> on the screen
 
-Scenario: Add three numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	And I have entered 10 into the calculator
-	When I press add
-	Then the result should be 130 on the screen
+Examples:
+	| number 1 | number 2 | result |
+	|   10      |     20     | 30       |
+	|     20     |  20        |    40    |
+	|   20       |    30      |     50   |
+	|    1000      |     10     |      1010  |
