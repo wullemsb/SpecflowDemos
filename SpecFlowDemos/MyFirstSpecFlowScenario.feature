@@ -1,17 +1,12 @@
-﻿Feature: MyFirstSpecFlowScenario
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+﻿Feature: SpecflowDemos
+	Show some SpecFlow features
 
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
-
-Scenario: Add three numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	And I have entered 10 into the calculator
-	When I press add
-	Then the result should be 130 on the screen
+Scenario: Using tables
+	Given I have the following persons
+	| FirstName | LastName |
+	| Bart      | Wullems  |
+	| Gill      | Cleeren  |
+	When I search for Gill
+	Then the following person should be returned
+	| FirstName | LastName |
+	| Gill      | Cleeren  |
